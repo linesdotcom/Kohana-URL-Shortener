@@ -40,7 +40,7 @@ class Kohana_Shortener {
 	public function __construct()
 	{
 	
-		$config_file = Kohana::config('shortener');
+		$config_file = Kohana::$config->load('shortener');
 		$this->table_name = $config_file['table_name'];
 		$this->base_url = $config_file['base_url'];
 		
